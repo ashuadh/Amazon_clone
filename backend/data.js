@@ -1,7 +1,23 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+    users: [
+      {
+        name: 'Basir',
+        email: 'admin@example.com',
+        password: bcrypt.hashSync('1234', 8),
+        isAdmin: true,
+      },
+      {
+        name: 'John',
+        email: 'user@example.com',
+        password: bcrypt.hashSync('1234', 8),
+        isAdmin: false,
+      },
+    ],
+
     products: [
       {
-        _id: '1',
         name: 'Nike Slim Shirt',
         category: 'Shirts',
         image: '/images/i1.jpg',
@@ -13,19 +29,6 @@ const data = {
         countInStock: 5,
       },
       {
-        _id: '2',
-        name: 'Adidas Fit Shirt',
-        category: 'Shirts',
-        image: '/images/i1.jpg',
-        price: 100,
-        brand: 'Adidas',
-        rating: 4.0,
-        numReviews: 10,
-        description: 'high quality product',
-        countInStock: 5,
-      },
-      {
-        _id: '3',
         name: 'Lacoste Free Shirt',
         category: 'Shirts',
         image: '/images/i2.jpg',
@@ -37,7 +40,6 @@ const data = {
         countInStock: 5,
       },
       {
-        _id: '4',
         name: 'Nike Slim Pant',
         category: 'Pants',
         image: '/images/i2.jpg',
@@ -49,7 +51,6 @@ const data = {
         countInStock: 5,
       },
       {
-        _id: '5',
         name: 'Puma Slim Pant',
         category: 'Pants',
         image: '/images/i3.jpg',
@@ -61,7 +62,6 @@ const data = {
         countInStock: 5,
       },
       {
-        _id: '6',
         name: 'Adidas Fit Pant',
         category: 'Pants',
         image: '/images/i3.jpg',
@@ -73,19 +73,6 @@ const data = {
         countInStock: 5,
       },
       {
-        _id: '7',
-        name: 'Adidas Fit Pant',
-        category: 'Pants',
-        image: '/images/i3.jpg',
-        price: 139,
-        brand: 'Adidas',
-        rating: 4.5,
-        numReviews: 15,
-        description: 'high quality product',
-        countInStock: 5,
-      },
-      {
-        _id: '8',
         name: 'Adidas Fit Pant',
         category: 'Pants',
         image: '/images/i3.jpg',
